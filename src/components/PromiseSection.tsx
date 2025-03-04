@@ -52,13 +52,13 @@ const PromiseSection = () => {
   ];
 
   return (
-    <section id="promise" className="py-24 bg-primary text-primary-foreground" ref={sectionRef}>
+    <section id="promise" className="py-24 bg-secondary" ref={sectionRef}>
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className={`section-title ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
+          <h2 className={`section-title text-white ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
             the37lab Promise
           </h2>
-          <p className={`text-xl text-primary-foreground/80 ${isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.2s" }}>
+          <p className={`text-xl text-foreground/80 ${isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.2s" }}>
             Real user value through applied AI, that you and your business can trust.
           </p>
         </div>
@@ -67,15 +67,15 @@ const PromiseSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`bg-primary-foreground/5 backdrop-blur-sm rounded-xl p-8 border border-primary-foreground/10 hover:border-accent/30 transition-colors ${
+              className={`bg-background/40 backdrop-blur-sm rounded-xl p-8 border border-accent/10 hover:border-accent/30 transition-colors ${
                 isVisible ? "animate-scale-in" : "opacity-0"
               }`}
               style={{ animationDelay: service.delay }}
             >
               <div className="flex flex-col h-full">
-                <div className="bg-accent/10 rounded-full p-3 w-fit mb-6">{service.icon}</div>
-                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                <p className="text-primary-foreground/70 flex-grow">{service.description}</p>
+                <div className="bg-accent/20 rounded-full p-3 w-fit mb-6">{service.icon}</div>
+                <h3 className="text-xl font-semibold mb-4 text-white">{service.title}</h3>
+                <p className="text-foreground/80 flex-grow">{service.description}</p>
               </div>
             </div>
           ))}

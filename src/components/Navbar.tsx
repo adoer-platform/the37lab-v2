@@ -23,7 +23,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center">
-          <a href="/" className="text-xl font-bold tracking-tight">
+          <a href="/" className="text-xl font-bold tracking-tight text-white">
             the37lab
           </a>
         </div>
@@ -32,25 +32,25 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-8">
           <a
             href="#risks"
-            className="text-sm font-medium hover:text-accent transition-colors"
+            className="text-sm font-medium text-foreground hover:text-accent transition-colors"
           >
             Risks
           </a>
           <a
             href="#ai-value-gap"
-            className="text-sm font-medium hover:text-accent transition-colors"
+            className="text-sm font-medium text-foreground hover:text-accent transition-colors"
           >
             AI Value Gap
           </a>
           <a
             href="#promise"
-            className="text-sm font-medium hover:text-accent transition-colors"
+            className="text-sm font-medium text-foreground hover:text-accent transition-colors"
           >
             Our Promise
           </a>
           <a
             href="#contact"
-            className="primary-btn"
+            className="accent-btn"
           >
             Get Started
           </a>
@@ -68,7 +68,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-background border-t border-border/50 animate-slide-down">
+        <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-accent/10 animate-slide-down">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <a
               href="#risks"
@@ -93,7 +93,7 @@ const Navbar = () => {
             </a>
             <a
               href="#contact"
-              className="primary-btn inline-block text-center"
+              className="accent-btn inline-block text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Get Started

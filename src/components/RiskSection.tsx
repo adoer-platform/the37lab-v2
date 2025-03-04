@@ -52,10 +52,10 @@ const RiskSection = () => {
   ];
 
   return (
-    <section id="risks" className="py-24 bg-secondary/30" ref={sectionRef}>
+    <section id="risks" className="py-24 bg-background" ref={sectionRef}>
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className={`section-title ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
+          <h2 className={`section-title text-white ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
             Three Types of Risks For Your AI Initiative
           </h2>
           <p className={`text-xl text-muted-foreground ${isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.2s" }}>
@@ -72,8 +72,8 @@ const RiskSection = () => {
             >
               <div className="flex flex-col items-center text-center">
                 <div className="mb-6">{risk.icon}</div>
-                <h3 className="text-xl font-semibold mb-4">{risk.title}</h3>
-                <p className="text-muted-foreground">{risk.description}</p>
+                <h3 className="text-xl font-semibold mb-4 text-white">{risk.title}</h3>
+                <p className="text-foreground/80">{risk.description}</p>
               </div>
             </div>
           ))}

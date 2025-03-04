@@ -58,10 +58,10 @@ const WhyUsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-secondary/30" ref={sectionRef}>
+    <section className="py-24 bg-background" ref={sectionRef}>
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className={`section-title ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
+          <h2 className={`section-title text-white ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
             Why Engage With the37lab?
           </h2>
           <p className={`text-xl text-muted-foreground ${isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.2s" }}>
@@ -73,17 +73,17 @@ const WhyUsSection = () => {
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className={`flex items-start gap-6 p-6 rounded-xl bg-background border border-border hover:border-accent/20 transition-all hover:shadow-sm ${
+              className={`flex items-start gap-6 p-6 rounded-xl bg-secondary/50 border border-accent/10 hover:border-accent/30 transition-all hover:shadow-md ${
                 isVisible ? "animate-scale-in" : "opacity-0"
               }`}
               style={{ animationDelay: reason.delay }}
             >
-              <div className="bg-accent/10 rounded-full p-3 flex-shrink-0">
+              <div className="bg-accent/20 rounded-full p-3 flex-shrink-0">
                 {reason.icon}
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-2">{reason.title}</h3>
-                <p className="text-muted-foreground">{reason.description}</p>
+                <h3 className="text-lg font-semibold mb-2 text-white">{reason.title}</h3>
+                <p className="text-foreground/80">{reason.description}</p>
               </div>
             </div>
           ))}

@@ -12,16 +12,16 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/30 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-accent/10 z-0"></div>
       
       {/* Content Container */}
       <div className="container mx-auto px-4 relative z-10 pt-20 md:pt-0">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block px-3 py-1 mb-6 rounded-full bg-accent/10 text-accent text-sm font-medium animate-fade-in">
+          <span className="inline-block px-3 py-1 mb-6 rounded-full bg-accent/20 text-accent text-sm font-medium animate-fade-in">
             AI Strategy & Implementation
           </span>
           
-          <h1 className="font-bold mb-6 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          <h1 className="font-bold mb-6 animate-slide-up text-white" style={{ animationDelay: "0.2s" }}>
             De-risk and fast-track your AI&nbsp;ambitions
           </h1>
           

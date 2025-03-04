@@ -5,33 +5,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 5% 10%;
+    --background: 220 20% 10%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 5% 10%;
+    --card: 220 20% 13%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 5% 10%;
+    --popover: 220 20% 13%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 240 4% 16%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 0 0% 95%;
+    --primary-foreground: 220 20% 10%;
 
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 240 4% 16%;
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 40%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 210 50% 60%;
+    --accent: 142 70% 45%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 5% 92%;
-    --input: 240 5% 92%;
-    --ring: 240 5% 40%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 142 70% 45%;
 
     --radius: 0.5rem;
 
@@ -85,11 +85,11 @@
   }
 
   .glass-card {
-    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-sm;
+    @apply bg-secondary/70 backdrop-blur-md border border-accent/10 shadow-md;
   }
 
   .glass-nav {
-    @apply bg-white/70 backdrop-blur-lg border-b border-white/10 shadow-sm;
+    @apply bg-background/80 backdrop-blur-lg border-b border-accent/10 shadow-md;
   }
 
   .section-container {
@@ -106,12 +106,12 @@
 
   .primary-btn {
     @apply px-6 py-3 bg-primary text-primary-foreground rounded-md font-medium transition-all
-           hover:bg-primary/90 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary/50;
+           hover:bg-primary/90 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-accent/50;
   }
 
   .secondary-btn {
     @apply px-6 py-3 bg-secondary text-secondary-foreground rounded-md font-medium transition-all
-           hover:bg-secondary/80 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary/50;
+           hover:bg-secondary/80 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-accent/50;
   }
 
   .accent-btn {
@@ -120,12 +120,12 @@
   }
 
   .card-highlight {
-    @apply relative overflow-hidden rounded-xl p-6 border border-border hover:border-accent/20 transition-colors;
+    @apply relative overflow-hidden rounded-xl p-6 border border-accent/10 hover:border-accent/30 transition-colors bg-secondary/50;
   }
 
   .card-highlight::before {
     content: "";
-    @apply absolute inset-0 bg-gradient-to-br from-accent/5 to-accent/0 opacity-0 transition-opacity duration-300;
+    @apply absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 transition-opacity duration-300;
   }
 
   .card-highlight:hover::before {
