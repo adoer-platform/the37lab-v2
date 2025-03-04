@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BrainCircuit, AtomIcon, Network } from "lucide-react";
 
 const ValueGapSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,10 +36,10 @@ const ValueGapSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className={`section-title ${isVisible ? "animate-slide-right" : "opacity-0"}`}>
-              The AI Value Gap
+              From Concept to Reality
             </h2>
             <p className={`text-xl mb-8 ${isVisible ? "animate-slide-right" : "opacity-0"}`} style={{ animationDelay: "0.2s" }}>
-              Generic AI solutions often fall short because they aren't tailored to specific business contexts and user needs.
+              Building effective AI solutions requires bridging the gap between technical capabilities and real-world applications.
             </p>
             <div className={`bg-secondary/50 rounded-lg p-6 border border-border ${isVisible ? "animate-slide-right" : "opacity-0"}`} style={{ animationDelay: "0.4s" }}>
               <h3 className="text-xl font-semibold mb-3">Coding is Easy, Software is Hard</h3>
@@ -55,78 +55,85 @@ const ValueGapSection = () => {
           
           <div className={`relative ${isVisible ? "animate-slide-left" : "opacity-0"}`} style={{ animationDelay: "0.3s" }}>
             <div className="aspect-square bg-gradient-to-br from-accent/5 to-background rounded-2xl overflow-hidden relative border border-accent/10">
-              {/* Improved Value Gap Visualization */}
-              <div className="absolute inset-0 flex items-center justify-center p-8">
-                <div className="w-full h-full relative">
-                  {/* Gradient background for depth */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-background/40 to-accent/5 opacity-40"></div>
+              {/* Artistic tech visualization */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                {/* Radial gradient background */}
+                <div className="absolute inset-0 bg-gradient-radial from-accent/10 via-background/50 to-background"></div>
+                
+                {/* Animated nodes and connections */}
+                <div className="relative w-full h-full">
+                  {/* Central node */}
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                    <div className="w-40 h-40 bg-gradient-to-br from-accent to-accent/70 rounded-full flex items-center justify-center z-20 border border-accent/30 shadow-[0_0_30px_rgba(142,220,45,0.3)]">
+                      <BrainCircuit size={60} className="text-accent-foreground" />
+                    </div>
+                  </div>
+                  
+                  {/* Orbital paths */}
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full border border-accent/20 opacity-80"></div>
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full border border-accent/10 opacity-60 
+                                  border-dashed"></div>
+                  
+                  {/* Surrounding nodes */}
+                  <div className="absolute left-1/2 top-[15%] -translate-x-1/2 flex flex-col items-center">
+                    <div className="w-24 h-24 bg-gradient-to-br from-purple-600/70 to-purple-800/70 rounded-full flex items-center justify-center z-10 border border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.3)]">
+                      <AtomIcon size={32} className="text-white" />
+                    </div>
+                  </div>
+                  
+                  <div className="absolute left-[15%] top-1/2 -translate-y-1/2 flex flex-col items-center">
+                    <div className="w-28 h-28 bg-gradient-to-br from-blue-500/70 to-blue-700/70 rounded-full flex items-center justify-center z-10 border border-blue-500/30 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+                      <Network size={36} className="text-white" />
+                    </div>
+                  </div>
+                  
+                  <div className="absolute right-[15%] top-1/2 -translate-y-1/2 flex flex-col items-center">
+                    <div className="w-28 h-28 bg-gradient-to-br from-accent/70 to-green-700/70 rounded-full flex items-center justify-center z-10 border border-accent/30 shadow-[0_0_15px_rgba(142,220,45,0.3)]">
+                      <BrainCircuit size={36} className="text-white" />
+                    </div>
+                  </div>
+                  
+                  <div className="absolute left-1/2 bottom-[15%] -translate-x-1/2 flex flex-col items-center">
+                    <div className="w-24 h-24 bg-gradient-to-br from-teal-500/70 to-teal-700/70 rounded-full flex items-center justify-center z-10 border border-teal-500/30 shadow-[0_0_15px_rgba(20,184,166,0.3)]">
+                      <AtomIcon size={32} className="text-white" />
+                    </div>
+                  </div>
                   
                   {/* Connecting lines */}
-                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 400">
-                    <path 
-                      d="M100,100 L300,100 L300,300 L100,300 Z" 
-                      fill="none" 
-                      stroke="rgba(142, 70, 45, 0.2)" 
-                      strokeWidth="1"
-                      strokeDasharray="5,5"
-                    />
-                    <path 
-                      d="M200,200 L100,100" 
-                      fill="none" 
-                      stroke="rgba(142, 70, 45, 0.4)" 
-                      strokeWidth="2"
-                    />
-                    <path 
-                      d="M200,200 L300,100" 
-                      fill="none" 
-                      stroke="rgba(142, 70, 45, 0.4)" 
-                      strokeWidth="2"
-                    />
+                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+                    <defs>
+                      <linearGradient id="lineGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="rgba(142, 220, 45, 0.7)" />
+                        <stop offset="100%" stopColor="rgba(59, 130, 246, 0.7)" />
+                      </linearGradient>
+                      <linearGradient id="lineGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="rgba(142, 220, 45, 0.7)" />
+                        <stop offset="100%" stopColor="rgba(168, 85, 247, 0.7)" />
+                      </linearGradient>
+                      <linearGradient id="lineGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="rgba(142, 220, 45, 0.7)" />
+                        <stop offset="100%" stopColor="rgba(20, 184, 166, 0.7)" />
+                      </linearGradient>
+                      <linearGradient id="lineGradient4" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="rgba(142, 220, 45, 0.7)" />
+                        <stop offset="100%" stopColor="rgba(16, 185, 129, 0.7)" />
+                      </linearGradient>
+                    </defs>
+                    
+                    {/* Pulse animation for lines */}
+                    <path d="M50,50 L50,15" stroke="url(#lineGradient2)" strokeWidth="0.5" fill="none">
+                      <animate attributeName="stroke-dasharray" from="0,150" to="150,0" dur="4s" repeatCount="indefinite" />
+                    </path>
+                    <path d="M50,50 L15,50" stroke="url(#lineGradient1)" strokeWidth="0.5" fill="none">
+                      <animate attributeName="stroke-dasharray" from="0,150" to="150,0" dur="3s" repeatCount="indefinite" />
+                    </path>
+                    <path d="M50,50 L85,50" stroke="url(#lineGradient4)" strokeWidth="0.5" fill="none">
+                      <animate attributeName="stroke-dasharray" from="0,150" to="150,0" dur="3.5s" repeatCount="indefinite" />
+                    </path>
+                    <path d="M50,50 L50,85" stroke="url(#lineGradient3)" strokeWidth="0.5" fill="none">
+                      <animate attributeName="stroke-dasharray" from="0,150" to="150,0" dur="4.5s" repeatCount="indefinite" />
+                    </path>
                   </svg>
-                  
-                  {/* Generic AI circle */}
-                  <div className="absolute left-1/4 -translate-x-1/2 top-1/4 -translate-y-1/2 flex flex-col items-center">
-                    <div className="w-32 h-32 bg-background rounded-full flex items-center justify-center shadow-lg border border-border z-10">
-                      <span className="text-sm font-medium text-center px-4">Generic AI</span>
-                    </div>
-                  </div>
-                  
-                  {/* Business Value circle */}
-                  <div className="absolute right-1/4 translate-x-1/2 top-1/4 -translate-y-1/2 flex flex-col items-center">
-                    <div className="w-32 h-32 bg-background rounded-full flex items-center justify-center shadow-lg border border-border z-10">
-                      <span className="text-sm font-medium text-center px-4">Business Value</span>
-                    </div>
-                  </div>
-                  
-                  {/* Value Gap area */}
-                  <div className="absolute top-1/2 left-0 right-0 h-20 bg-destructive/10 flex items-center justify-center">
-                    <span className="text-destructive font-semibold">Value Gap</span>
-                  </div>
-                  
-                  {/* the37lab Solution */}
-                  <div className="absolute left-1/2 -translate-x-1/2 bottom-12 flex flex-col items-center">
-                    <div className="w-40 h-40 bg-gradient-to-br from-accent to-accent/70 rounded-full flex items-center justify-center shadow-lg z-20 border border-accent/20">
-                      <div className="text-center text-accent-foreground">
-                        <div className="font-bold">the37lab</div>
-                        <div className="text-sm mt-1">Bridging the Gap</div>
-                      </div>
-                    </div>
-                    {/* Add connecting rays from the37lab circle */}
-                    <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 400 400" style={{ zIndex: 0 }}>
-                      <path 
-                        d="M200,300 L100,100" 
-                        fill="none" 
-                        stroke="rgba(142, 220, 45, 0.3)" 
-                        strokeWidth="2"
-                      />
-                      <path 
-                        d="M200,300 L300,100" 
-                        fill="none" 
-                        stroke="rgba(142, 220, 45, 0.3)" 
-                        strokeWidth="2"
-                      />
-                    </svg>
-                  </div>
                 </div>
               </div>
             </div>
