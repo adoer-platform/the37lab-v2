@@ -54,18 +54,48 @@ const ValueGapSection = () => {
           </div>
           
           <div className={`relative ${isVisible ? "animate-slide-left" : "opacity-0"}`} style={{ animationDelay: "0.3s" }}>
-            <div className="aspect-square bg-accent/10 rounded-2xl overflow-hidden relative">
-              {/* Value Gap Illustration */}
+            <div className="aspect-square bg-gradient-to-br from-accent/5 to-background rounded-2xl overflow-hidden relative border border-accent/10">
+              {/* Improved Value Gap Visualization */}
               <div className="absolute inset-0 flex items-center justify-center p-8">
-                <div className="w-full">
+                <div className="w-full h-full relative">
+                  {/* Gradient background for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-background/40 to-accent/5 opacity-40"></div>
+                  
+                  {/* Connecting lines */}
+                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 400">
+                    <path 
+                      d="M100,100 L300,100 L300,300 L100,300 Z" 
+                      fill="none" 
+                      stroke="rgba(142, 70, 45, 0.2)" 
+                      strokeWidth="1"
+                      strokeDasharray="5,5"
+                    />
+                    <path 
+                      d="M200,200 L100,100" 
+                      fill="none" 
+                      stroke="rgba(142, 70, 45, 0.4)" 
+                      strokeWidth="2"
+                    />
+                    <path 
+                      d="M200,200 L300,100" 
+                      fill="none" 
+                      stroke="rgba(142, 70, 45, 0.4)" 
+                      strokeWidth="2"
+                    />
+                  </svg>
+                  
                   {/* Generic AI circle */}
-                  <div className="bg-white rounded-full h-32 w-32 flex items-center justify-center absolute left-1/4 -translate-x-1/2 top-1/4 -translate-y-1/2 shadow-lg border border-border z-10">
-                    <span className="text-sm font-medium">Generic AI</span>
+                  <div className="absolute left-1/4 -translate-x-1/2 top-1/4 -translate-y-1/2 flex flex-col items-center">
+                    <div className="w-32 h-32 bg-background rounded-full flex items-center justify-center shadow-lg border border-border z-10">
+                      <span className="text-sm font-medium text-center px-4">Generic AI</span>
+                    </div>
                   </div>
                   
                   {/* Business Value circle */}
-                  <div className="bg-white rounded-full h-32 w-32 flex items-center justify-center absolute right-1/4 translate-x-1/2 top-1/4 -translate-y-1/2 shadow-lg border border-border z-10">
-                    <span className="text-sm font-medium">Business Value</span>
+                  <div className="absolute right-1/4 translate-x-1/2 top-1/4 -translate-y-1/2 flex flex-col items-center">
+                    <div className="w-32 h-32 bg-background rounded-full flex items-center justify-center shadow-lg border border-border z-10">
+                      <span className="text-sm font-medium text-center px-4">Business Value</span>
+                    </div>
                   </div>
                   
                   {/* Value Gap area */}
@@ -74,11 +104,28 @@ const ValueGapSection = () => {
                   </div>
                   
                   {/* the37lab Solution */}
-                  <div className="bg-accent rounded-full h-40 w-40 flex items-center justify-center absolute left-1/2 -translate-x-1/2 bottom-6 shadow-lg border border-accent/20 z-20">
-                    <div className="text-center text-accent-foreground">
-                      <div className="font-bold">the37lab</div>
-                      <div className="text-sm">Bridging the Gap</div>
+                  <div className="absolute left-1/2 -translate-x-1/2 bottom-12 flex flex-col items-center">
+                    <div className="w-40 h-40 bg-gradient-to-br from-accent to-accent/70 rounded-full flex items-center justify-center shadow-lg z-20 border border-accent/20">
+                      <div className="text-center text-accent-foreground">
+                        <div className="font-bold">the37lab</div>
+                        <div className="text-sm mt-1">Bridging the Gap</div>
+                      </div>
                     </div>
+                    {/* Add connecting rays from the37lab circle */}
+                    <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 400 400" style={{ zIndex: 0 }}>
+                      <path 
+                        d="M200,300 L100,100" 
+                        fill="none" 
+                        stroke="rgba(142, 220, 45, 0.3)" 
+                        strokeWidth="2"
+                      />
+                      <path 
+                        d="M200,300 L300,100" 
+                        fill="none" 
+                        stroke="rgba(142, 220, 45, 0.3)" 
+                        strokeWidth="2"
+                      />
+                    </svg>
                   </div>
                 </div>
               </div>

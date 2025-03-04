@@ -69,8 +69,16 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="py-24" ref={sectionRef}>
-      <div className="section-container">
+    <section className="py-24 relative overflow-hidden" ref={sectionRef}>
+      {/* Background graphic elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
+        <div className="absolute -left-20 top-1/3 w-40 h-40 border border-accent/10 rounded-full"></div>
+        <div className="absolute -right-20 bottom-1/3 w-40 h-40 border border-accent/10 rounded-full"></div>
+      </div>
+      
+      <div className="section-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className={`section-title ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
             How We Do It: Step-by-Step
@@ -80,8 +88,11 @@ const ProcessSection = () => {
           </p>
         </div>
         
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-12">
+        <div className="max-w-4xl mx-auto relative">
+          {/* Vertical connecting line */}
+          <div className="absolute left-8 top-10 bottom-10 w-0.5 bg-gradient-to-b from-accent/50 via-accent/20 to-accent/5 hidden md:block"></div>
+          
+          <div className="space-y-12 relative">
             {steps.map((step, index) => (
               <div
                 key={index}
@@ -90,10 +101,10 @@ const ProcessSection = () => {
                 }`}
                 style={{ animationDelay: step.delay }}
               >
-                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 flex-shrink-0">
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 flex-shrink-0 border border-accent/20 relative z-10">
                   {step.icon}
                 </div>
-                <div>
+                <div className="md:bg-secondary/30 md:backdrop-blur-sm md:rounded-lg md:p-6 md:border md:border-accent/10 flex-1">
                   <div className="flex items-center mb-2">
                     <span className="text-sm font-semibold text-accent mr-2">{step.number}</span>
                     <h3 className="text-xl font-semibold">{step.title}</h3>
