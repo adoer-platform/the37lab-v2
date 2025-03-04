@@ -1,12 +1,57 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from "react";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import RiskSection from "../components/RiskSection";
+import ValueGapSection from "../components/ValueGapSection";
+import PromiseSection from "../components/PromiseSection";
+import ArchitectureSection from "../components/ArchitectureSection";
+import ProcessSection from "../components/ProcessSection";
+import WhyUsSection from "../components/WhyUsSection";
+import NextStepsSection from "../components/NextStepsSection";
+import Footer from "../components/Footer";
 
 const Index = () => {
+  useEffect(() => {
+    // Update document title
+    document.title = "the37lab | De-risk and fast-track your AI ambitions";
+    
+    // Add fade-in animation to sections on scroll
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const fadeElements = document.querySelectorAll(".fade-in-section");
+    fadeElements.forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => {
+      fadeElements.forEach((element) => {
+        observer.unobserve(element);
+      });
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navbar />
+      <Hero />
+      <RiskSection />
+      <ValueGapSection />
+      <PromiseSection />
+      <ArchitectureSection />
+      <ProcessSection />
+      <WhyUsSection />
+      <NextStepsSection />
+      <Footer />
     </div>
   );
 };
