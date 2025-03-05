@@ -1,3 +1,4 @@
+
 import { ChevronDown, BrainCircuit, Network, Infinity } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -27,7 +28,7 @@ const Hero = () => {
         <img 
           src="/lovable-uploads/0fd70ea5-dd36-4d88-b60d-d5ac19010e4b.png" 
           alt="the37lab logo background" 
-          className="w-[80%] max-w-[800px] transform scale-[1.5]"
+          className="w-[80%] max-w-[800px] transform scale-[1.5] mix-blend-luminosity"
         />
       </div>
       
@@ -104,7 +105,7 @@ const Hero = () => {
             <img 
               src="/lovable-uploads/0fd70ea5-dd36-4d88-b60d-d5ac19010e4b.png" 
               alt="the37lab logo" 
-              className="w-[200px] h-auto"
+              className="w-[200px] h-auto mix-blend-luminosity filter contrast-200 brightness-150"
             />
           </div>
           
