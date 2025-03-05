@@ -49,6 +49,12 @@ const Navbar = () => {
             Our Promise
           </a>
           <a
+            href="#the37blog"
+            className="text-sm font-medium text-foreground hover:text-accent transition-colors"
+          >
+            the37blog
+          </a>
+          <a
             href="#contact"
             className="accent-btn"
           >
@@ -90,6 +96,13 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Our Promise
+            </a>
+            <a
+              href="#the37blog"
+              className="py-2 text-foreground hover:text-accent transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              the37blog
             </a>
             <a
               href="#contact"
