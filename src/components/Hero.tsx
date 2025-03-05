@@ -102,11 +102,9 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10 pt-20 md:pt-0">
         <div className="max-w-4xl mx-auto text-center">
           <div className={`flex justify-center mb-6 transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <img 
-              src="/lovable-uploads/0fd70ea5-dd36-4d88-b60d-d5ac19010e4b.png" 
-              alt="the37lab logo" 
-              className="w-[200px] h-auto mix-blend-luminosity filter contrast-200 brightness-150"
-            />
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-foreground text-shadow-glow">
+              the37lab
+            </h1>
           </div>
           
           <h1 className={`font-bold mb-8 text-white transition-all duration-700 delay-300 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
