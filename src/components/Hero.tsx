@@ -1,4 +1,3 @@
-
 import { ChevronDown, BrainCircuit, Network, Infinity } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -101,9 +100,13 @@ const Hero = () => {
       {/* Content Container with enhanced animation */}
       <div className="container mx-auto px-4 relative z-10 pt-20 md:pt-0">
         <div className="max-w-4xl mx-auto text-center">
-          <span className={`inline-block px-4 py-1.5 mb-6 rounded-full bg-gradient-to-r from-accent/30 to-purple-500/30 text-white text-sm font-medium transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            AI Strategy & Implementation
-          </span>
+          <div className={`flex justify-center mb-6 transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <img 
+              src="/lovable-uploads/0fd70ea5-dd36-4d88-b60d-d5ac19010e4b.png" 
+              alt="the37lab logo" 
+              className="w-[200px] h-auto"
+            />
+          </div>
           
           <h1 className={`font-bold mb-8 text-white transition-all duration-700 delay-300 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <span className="block text-accent text-shadow-glow">De-risk</span> and fast-track your <span className="relative inline-block">
