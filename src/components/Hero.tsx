@@ -1,3 +1,4 @@
+
 import { ChevronDown, BrainCircuit, Network, Infinity } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -19,28 +20,31 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Enhanced background with richer gradients */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-purple-900/20 z-0"></div>
+      {/* Starry sky background with deep space gradients */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1A1F2C] via-[#221F26] to-[#403E43]/60 z-0"></div>
       
-      {/* Enhanced animated particle field */}
+      {/* Dynamic stars layer */}
       <div className="absolute inset-0 overflow-hidden z-0">
-        <div className="absolute w-full h-full opacity-20">
-          {/* Particle dots grid with more artistic pattern */}
-          <div className="h-full w-full" style={{ 
-            backgroundImage: 'radial-gradient(rgba(142, 220, 45, 0.6) 1px, transparent 1px), radial-gradient(rgba(111, 76, 255, 0.3) 1px, transparent 2px)', 
-            backgroundSize: '30px 30px, 50px 50px',
-            backgroundPosition: '0 0, 15px 15px'
-          }}></div>
-        </div>
+        {/* Small twinkling stars */}
+        <div className="stars-small absolute inset-0"></div>
+        
+        {/* Medium twinkling stars */}
+        <div className="stars-medium absolute inset-0"></div>
+        
+        {/* Large twinkling stars */}
+        <div className="stars-large absolute inset-0"></div>
+        
+        {/* Occasional shooting stars */}
+        <div className="shooting-stars absolute inset-0"></div>
+        
+        {/* Nebula-like clouds */}
+        <div className="absolute top-1/3 -left-20 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-float-slow"></div>
+        <div className="absolute bottom-1/4 -right-20 w-[30rem] h-[30rem] bg-[#1EAEDB]/5 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute top-2/3 left-1/3 w-64 h-64 bg-accent/5 rounded-full blur-xl animate-pulse opacity-50"></div>
       </div>
       
       {/* Enhanced abstract graphic elements with animation */}
       <div className="absolute inset-0 overflow-hidden z-0">
-        {/* Larger glowing orbs with pulsation */}
-        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 -right-20 w-[30rem] h-[30rem] bg-purple-500/15 rounded-full blur-3xl"></div>
-        <div className="absolute top-3/4 left-1/3 w-64 h-64 bg-blue-500/10 rounded-full blur-xl animate-pulse opacity-70"></div>
-        
         {/* Digital circuit pattern overlay with more complex pattern */}
         <svg className="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 100 100">
           <path 
@@ -77,14 +81,6 @@ const Hero = () => {
         </div>
         <div className={`absolute top-2/3 left-2/3 transform -translate-x-1/2 -translate-y-1/2 opacity-20 transition-all duration-1000 ease-out ${animate ? 'opacity-20 scale-100' : 'opacity-0 scale-90'}`}>
           <Infinity size={80} className="text-blue-400 animate-float-slow" />
-        </div>
-        
-        {/* Animated concentric circles with artistic gradient borders */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <div className={`w-[900px] h-[900px] border border-gradient-to-r from-accent/30 to-purple-500/30 rounded-full transition-all duration-1000 ease-out ${animate ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}></div>
-          <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] border border-gradient-to-r from-purple-500/30 to-blue-500/30 rounded-full transition-all duration-1000 delay-300 ease-out ${animate ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}></div>
-          <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-gradient-to-r from-blue-500/30 to-accent/30 rounded-full transition-all duration-1000 delay-500 ease-out ${animate ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}></div>
-          <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] border border-accent/30 rounded-full transition-all duration-1000 delay-700 ease-out ${animate ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}></div>
         </div>
       </div>
       

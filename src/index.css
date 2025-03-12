@@ -139,6 +139,57 @@
   .bg-gradient-radial {
     background-image: radial-gradient(var(--tw-gradient-stops));
   }
+  
+  /* Starry sky animation styles */
+  .stars-small {
+    background-image: radial-gradient(1px 1px at calc(100% * var(--x, 0)) calc(100% * var(--y, 0)), white, transparent);
+    background-size: 100px 100px;
+    animation: twinkle 4s infinite;
+  }
+  
+  .stars-medium {
+    background-image: radial-gradient(1.5px 1.5px at calc(100% * var(--x, 0.4)) calc(100% * var(--y, 0.3)), rgba(255, 255, 255, 0.8), transparent);
+    background-size: 200px 200px;
+    animation: twinkle 6s infinite;
+  }
+  
+  .stars-large {
+    background-image: radial-gradient(2px 2px at calc(100% * var(--x, 0.7)) calc(100% * var(--y, 0.6)), rgba(255, 255, 255, 0.9), transparent);
+    background-size: 300px 300px;
+    animation: twinkle 8s infinite;
+  }
+  
+  .shooting-stars {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .shooting-stars::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, white, transparent);
+    transform: rotate(-45deg);
+    top: 20%;
+    left: -100px;
+    animation: shooting 8s infinite ease-out;
+    animation-delay: 2s;
+  }
+  
+  .shooting-stars::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, rgba(111, 76, 255, 0.7), transparent);
+    transform: rotate(35deg);
+    top: 60%;
+    right: -150px;
+    animation: shooting2 12s infinite ease-out;
+    animation-delay: 6s;
+  }
 }
 
 @keyframes dash {
@@ -177,6 +228,53 @@
   }
   50% {
     transform: translateY(-5px);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes shooting {
+  0% {
+    left: -100px;
+    opacity: 0;
+  }
+  10% {
+    left: 10%;
+    opacity: 1;
+  }
+  20% {
+    left: 30%;
+    opacity: 0;
+  }
+  100% {
+    left: 30%;
+    opacity: 0;
+  }
+}
+
+@keyframes shooting2 {
+  0% {
+    right: -150px;
+    opacity: 0;
+  }
+  10% {
+    right: 10%;
+    opacity: 1;
+  }
+  20% {
+    right: 40%;
+    opacity: 0;
+  }
+  100% {
+    right: 40%;
+    opacity: 0;
   }
 }
 
