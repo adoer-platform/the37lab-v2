@@ -1,4 +1,3 @@
-
 import { ChevronDown, BrainCircuit, Network, Infinity } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -22,15 +21,6 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Enhanced background with richer gradients */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-purple-900/20 z-0"></div>
-      
-      {/* Logo background */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center opacity-[0.06] pointer-events-none">
-        <img 
-          src="/lovable-uploads/0fd70ea5-dd36-4d88-b60d-d5ac19010e4b.png" 
-          alt="the37lab logo background" 
-          className="w-[80%] max-w-[800px] transform scale-[1.5] mix-blend-luminosity"
-        />
-      </div>
       
       {/* Enhanced animated particle field */}
       <div className="absolute inset-0 overflow-hidden z-0">
