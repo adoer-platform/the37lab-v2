@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import SoftwareComponents from "../components/SoftwareComponents";
 import RiskSection from "../components/RiskSection";
 import ValueGapSection from "../components/ValueGapSection";
 import PromiseSection from "../components/PromiseSection";
@@ -45,6 +46,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+      <SoftwareComponents />
       <RiskSection />
       <ValueGapSection />
       <PromiseSection />
