@@ -47,19 +47,17 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10 pt-20 md:pt-0">
         <div className="max-w-4xl mx-auto text-center">
           <div className={`flex justify-center mb-6 transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <img 
-              src="/public/lovable-uploads/acc66ce2-24af-4d71-b5b4-5f5c579145c1.png" 
-              alt="the37lab" 
-              className="w-64 md:w-80 h-auto animate-float"
-            />
+            <h1 className="text-7xl sm:text-8xl md:text-9xl font-bold text-white tracking-tighter animate-float">
+              <span className="text-accent text-shadow-glow">the37lab</span>
+            </h1>
           </div>
           
-          <h1 className={`font-bold mb-8 text-white transition-all duration-700 delay-300 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <h2 className={`font-bold mb-8 text-white transition-all duration-700 delay-300 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <span className="block text-accent text-shadow-glow">De-risk</span> and fast-track your <span className="relative inline-block">
               AI&nbsp;ambitions
               <span className="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-accent to-purple-500 rounded-full"></span>
             </span>
-          </h1>
+          </h2>
           
           <p className={`text-xl md:text-2xl text-muted-foreground mb-12 transition-all duration-700 delay-500 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             From ideation to AI-driven, scalable solutions — <br className="hidden md:block" />
