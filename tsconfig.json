@@ -5,6 +5,7 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
+    "outDir": "./docs",
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
