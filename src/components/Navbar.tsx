@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 const Navbar = () => {
@@ -21,7 +20,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#architectural-components" className="text-sm font-medium text-foreground hover:text-accent transition-colors">Getting started with AI</a>
+          <a href="#architectural-components" className="text-sm font-medium text-foreground hover:text-accent transition-colors">AI Building Blocks</a>
           <a href="#ai-value-gap" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
             AI Value Gap
           </a>
