@@ -1,5 +1,5 @@
 
-import { ChevronDown, BrainCircuit, Network, Infinity } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
@@ -43,54 +43,15 @@ const Hero = () => {
         <div className="absolute top-2/3 left-1/3 w-64 h-64 bg-accent/5 rounded-full blur-xl animate-pulse opacity-50"></div>
       </div>
       
-      {/* Enhanced abstract graphic elements with animation */}
-      <div className="absolute inset-0 overflow-hidden z-0">
-        {/* Digital circuit pattern overlay with more complex pattern */}
-        <svg className="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 100 100">
-          <path 
-            d="M10,30 Q20,10 30,30 T50,30 T70,30 T90,30 M90,50 Q70,70 50,50 T30,50 T10,50 M10,70 Q30,90 50,70 T70,70 T90,70" 
-            fill="none" 
-            stroke="rgba(142, 220, 45, 0.6)" 
-            strokeWidth="0.3"
-            strokeDasharray="0.5,0.5"
-            className={`${animate ? 'animate-dash' : ''}`}
-          />
-          <path 
-            d="M30,10 Q50,30 30,50 T30,90 M50,10 Q70,30 50,50 T50,90 M70,10 Q90,30 70,50 T70,90" 
-            fill="none" 
-            stroke="rgba(111, 76, 255, 0.4)" 
-            strokeWidth="0.2"
-            strokeDasharray="0.8,0.8"
-            className={`${animate ? 'animate-dash-reverse' : ''}`}
-          />
-          
-          {/* Connection points */}
-          {[10, 30, 50, 70, 90].map((x) => 
-            [30, 50, 70].map((y) => (
-              <circle key={`${x}-${y}`} cx={x} cy={y} r="0.8" fill="rgba(142, 220, 45, 0.8)" className={`${animate ? 'animate-pulse' : ''}`} />
-            ))
-          )}
-        </svg>
-        
-        {/* Animated floating tech icons */}
-        <div className={`absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 opacity-20 transition-all duration-1000 ease-out ${animate ? 'opacity-20 scale-100' : 'opacity-0 scale-90'}`}>
-          <BrainCircuit size={120} className="text-accent animate-float" />
-        </div>
-        <div className={`absolute bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2 opacity-20 transition-all duration-1000 ease-out ${animate ? 'opacity-20 scale-100' : 'opacity-0 scale-90'}`}>
-          <Network size={100} className="text-purple-400 animate-float-reverse" />
-        </div>
-        <div className={`absolute top-2/3 left-2/3 transform -translate-x-1/2 -translate-y-1/2 opacity-20 transition-all duration-1000 ease-out ${animate ? 'opacity-20 scale-100' : 'opacity-0 scale-90'}`}>
-          <Infinity size={80} className="text-blue-400 animate-float-slow" />
-        </div>
-      </div>
-      
       {/* Content Container with enhanced animation */}
       <div className="container mx-auto px-4 relative z-10 pt-20 md:pt-0">
         <div className="max-w-4xl mx-auto text-center">
           <div className={`flex justify-center mb-6 transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-foreground text-shadow-glow">
-              the37lab
-            </h1>
+            <img 
+              src="/public/lovable-uploads/522acf04-9679-4864-bbb3-dddcee6dbf23.png" 
+              alt="the37lab" 
+              className="w-64 md:w-80 h-auto animate-float"
+            />
           </div>
           
           <h1 className={`font-bold mb-8 text-white transition-all duration-700 delay-300 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
