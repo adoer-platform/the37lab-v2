@@ -1,25 +1,21 @@
-
 import { ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
-
 const Hero = () => {
   const [animate, setAnimate] = useState(false);
-  
   useEffect(() => {
     // Trigger animations after component mounts
     const timer = setTimeout(() => setAnimate(true), 100);
     return () => clearTimeout(timer);
   }, []);
-
   const scrollToContent = () => {
     const firstSection = document.getElementById("risks");
     if (firstSection) {
-      firstSection.scrollIntoView({ behavior: "smooth" });
+      firstSection.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Starry sky background with deep space gradients */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#1A1F2C] via-[#221F26] to-[#403E43]/60 z-0"></div>
       
@@ -53,7 +49,7 @@ const Hero = () => {
           </div>
           
           <h2 className={`font-bold mb-8 text-white transition-all duration-700 delay-300 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <span className="block text-accent text-shadow-glow">De-risk</span> and fast-track your <span className="relative inline-block">
+            <span className="block text-accent text-shadow-glow text-6xl">De-risk</span> and fast-track your <span className="relative inline-block">
               AI&nbsp;ambitions
               <span className="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-accent to-purple-500 rounded-full"></span>
             </span>
@@ -78,10 +74,7 @@ const Hero = () => {
       </div>
       
       {/* Enhanced scroll indicator with artistic glow effect */}
-      <div 
-        className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer group transition-all duration-1000 delay-1000 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-        onClick={scrollToContent}
-      >
+      <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer group transition-all duration-1000 delay-1000 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} onClick={scrollToContent}>
         <div className="relative">
           <ChevronDown className="h-8 w-8 text-accent animate-bounce" />
           <div className="absolute inset-0 bg-gradient-to-r from-accent/30 to-purple-500/30 rounded-full blur-md -z-10 group-hover:bg-accent/30 transition-colors duration-300"></div>
@@ -90,8 +83,6 @@ const Hero = () => {
 
       {/* Artistic glowing line at bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent"></div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
