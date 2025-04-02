@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import BlogPost1 from "./pages/BlogPost1";
 import BlogPost2 from "./pages/BlogPost2";
 import BlogPost3 from "./pages/BlogPost3";
+import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/blog/ai-strategy-enterprise" element={<BlogPost1 />} />
           <Route path="/blog/case-study-financial-services" element={<BlogPost2 />} />
           <Route path="/blog/technical-debt-ai" element={<BlogPost3 />} />
