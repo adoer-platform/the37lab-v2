@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 const Navbar = () => {
@@ -20,7 +21,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#risks" className="text-sm font-medium text-foreground hover:text-accent transition-colors">Getting started with AI</a>
+          <a href="#architectural-components" className="text-sm font-medium text-foreground hover:text-accent transition-colors">Getting started with AI</a>
           <a href="#ai-value-gap" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
             AI Value Gap
           </a>
@@ -44,8 +45,8 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-accent/10 animate-slide-down">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <a href="#risks" className="py-2 text-foreground hover:text-accent transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
-              Risks
+            <a href="#architectural-components" className="py-2 text-foreground hover:text-accent transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+              Getting started with AI
             </a>
             <a href="#ai-value-gap" className="py-2 text-foreground hover:text-accent transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               AI Value Gap

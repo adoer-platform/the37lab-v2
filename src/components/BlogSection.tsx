@@ -1,6 +1,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 type BlogPost = {
   id: number;
@@ -10,6 +11,7 @@ type BlogPost = {
   date: string;
   readTime: string;
   imageUrl: string;
+  path: string;
 };
 
 const BlogSection = () => {
@@ -29,7 +31,8 @@ const BlogSection = () => {
       category: "Strategy",
       date: "June 12, 2023",
       readTime: "8 min read",
-      imageUrl: "/placeholder.svg"
+      imageUrl: "/placeholder.svg",
+      path: "/blog/ai-strategy-enterprise"
     },
     {
       id: 2,
@@ -38,7 +41,8 @@ const BlogSection = () => {
       category: "Case Study",
       date: "May 28, 2023",
       readTime: "12 min read",
-      imageUrl: "/placeholder.svg"
+      imageUrl: "/placeholder.svg",
+      path: "/blog/case-study-financial-services"
     },
     {
       id: 3,
@@ -47,7 +51,8 @@ const BlogSection = () => {
       category: "Technical",
       date: "April 15, 2023",
       readTime: "10 min read",
-      imageUrl: "/placeholder.svg"
+      imageUrl: "/placeholder.svg",
+      path: "/blog/technical-debt-ai"
     }
   ];
 
@@ -71,10 +76,10 @@ const BlogSection = () => {
                 </p>
               </div>
               
-              <a href="#" className="group flex items-center text-accent font-medium mt-4 md:mt-0 hover:underline">
+              <Link to="/blog" className="group flex items-center text-accent font-medium mt-4 md:mt-0 hover:underline">
                 View all articles
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
+              </Link>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -106,10 +111,10 @@ const BlogSection = () => {
                       {post.excerpt}
                     </p>
                     
-                    <a href="#" className="mt-auto group-hover:text-accent transition-colors flex items-center font-medium">
+                    <Link to={post.path} className="mt-auto group-hover:text-accent transition-colors flex items-center font-medium">
                       Read more
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               ))}

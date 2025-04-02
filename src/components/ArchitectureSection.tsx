@@ -52,11 +52,11 @@ const ArchitectureSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-secondary/50" ref={sectionRef}>
+    <section id="architectural-components" className="py-24 bg-secondary/50" ref={sectionRef}>
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className={`section-title ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
-            Architectural Components
+            Strategic AI Building Blocks
           </h2>
           <p className={`text-xl text-muted-foreground ${isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.2s" }}>
             We integrate the best technological building blocks to create solutions tailored to your specific needs.
