@@ -48,7 +48,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className={`flex justify-center mb-6 transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <img 
-              src="/public/lovable-uploads/522acf04-9679-4864-bbb3-dddcee6dbf23.png" 
+              src="/public/lovable-uploads/acc66ce2-24af-4d71-b5b4-5f5c579145c1.png" 
               alt="the37lab" 
               className="w-64 md:w-80 h-auto animate-float"
             />
