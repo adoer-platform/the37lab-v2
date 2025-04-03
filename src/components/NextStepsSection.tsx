@@ -1,6 +1,5 @@
 
 import { useState, useEffect, useRef } from "react";
-import { ArrowRight } from "lucide-react";
 
 const NextStepsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,18 +42,6 @@ const NextStepsSection = () => {
           >
             Let's discuss your challenges and explore how AI can deliver pragmatic, engaging, and risk-reduced solutions for your business.
           </p>
-          <div 
-            className={`${isVisible ? "animate-scale-in" : "opacity-0"}`} 
-            style={{ animationDelay: "0.4s" }}
-          >
-            <a 
-              href="#"
-              className="group inline-flex items-center justify-center bg-accent hover:bg-accent/90 text-accent-foreground rounded-md px-8 py-4 font-medium transition-all active:scale-[0.98]"
-            >
-              Schedule a Free Consultation
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </a>
-          </div>
         </div>
       </div>
     </section>
