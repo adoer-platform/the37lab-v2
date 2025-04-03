@@ -1,4 +1,3 @@
-
 import { ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 const Hero = () => {
@@ -63,7 +62,7 @@ const Hero = () => {
           
           <div className={`flex flex-col sm:flex-row gap-5 justify-center transition-all duration-700 delay-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <a href="#contact" className="accent-btn group relative overflow-hidden text-xl">
-              <span className="relative z-10">Let's Talk</span>
+              <span className="relative z-10">Contact us</span>
               <span className="absolute inset-0 bg-gradient-to-r from-accent/80 to-accent/60 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
             </a>
             <a href="#promise" className="secondary-btn group relative overflow-hidden text-xl">
