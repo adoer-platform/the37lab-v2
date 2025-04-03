@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from "react";
-import { Code, Brain, GitMerge } from "lucide-react";
+import { Code, TerminalSquare, Infinity } from "lucide-react";
 
 const SoftwareComponents = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,19 +34,19 @@ const SoftwareComponents = () => {
     {
       icon: <Code className="h-16 w-16 text-accent" />,
       name: "ADoer",
-      description: "Intelligent automation platform that streamlines workflows and enhances productivity",
+      description: "Scaling your software dev team at lowest possible friction and keeping the startup-pace",
       delay: "0ms",
     },
     {
-      icon: <Brain className="h-16 w-16 text-accent" />,
+      icon: <TerminalSquare className="h-16 w-16 text-accent" />,
       name: "AMPA",
-      description: "Advanced modeling and predictive analytics solution for data-driven decision making",
+      description: "For the AI-developer, externalize all your prompts and agents",
       delay: "100ms",
     },
     {
-      icon: <GitMerge className="h-16 w-16 text-accent" />,
+      icon: <Infinity className="h-16 w-16 text-accent" />,
       name: "Citeloop",
-      description: "Collaborative research platform that connects insights across disciplines",
+      description: "A new take on User-Generated Content with AI as the magic wand to scale your video comments",
       delay: "200ms",
     },
   ];
@@ -94,25 +94,6 @@ const SoftwareComponents = () => {
                 <p className="text-xl text-muted-foreground leading-relaxed">
                   {component.description}
                 </p>
-                
-                {/* Interactive element */}
-                <div className="mt-8 pt-4 border-t border-accent/10">
-                  <a 
-                    href="#" 
-                    className="text-lg inline-flex items-center text-accent opacity-80 hover:opacity-100 transition-opacity"
-                  >
-                    Learn more
-                    <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" 
-                      fill="none" 
-                      viewBox="0 0 24 24" 
-                      stroke="currentColor"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </a>
-                </div>
               </div>
             </div>
           ))}

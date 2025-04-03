@@ -1,8 +1,12 @@
+
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -10,12 +14,13 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "glass-nav py-3" : "bg-transparent py-6"}`}>
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center">
-          <a href="/" className="text-2xl font-bold tracking-tight text-white">
+          <Link to="/" className="text-2xl font-bold tracking-tight text-white">
             the37lab
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
@@ -25,9 +30,9 @@ const Navbar = () => {
             AI Value Gap
           </a>
           <a href="#promise" className="text-lg font-medium text-foreground hover:text-accent transition-colors">What we do</a>
-          <a href="#contact" className="accent-btn text-lg">
+          <Link to="/contact" className="accent-btn text-lg">
             Get Started
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Navigation Toggle */}
@@ -48,11 +53,12 @@ const Navbar = () => {
             <a href="#promise" className="py-2 text-xl text-foreground hover:text-accent transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Our Promise
             </a>
-            <a href="#contact" className="accent-btn inline-block text-center text-xl" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link to="/contact" className="accent-btn inline-block text-center text-xl" onClick={() => setIsMobileMenuOpen(false)}>
               Get Started
-            </a>
+            </Link>
           </div>
         </div>}
     </nav>;
 };
+
 export default Navbar;
