@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 const Navbar = () => {
@@ -25,9 +24,7 @@ const Navbar = () => {
           <a href="#ai-value-gap" className="text-lg font-medium text-foreground hover:text-accent transition-colors">
             AI Value Gap
           </a>
-          <a href="#promise" className="text-lg font-medium text-foreground hover:text-accent transition-colors">
-            Our Promise
-          </a>
+          <a href="#promise" className="text-lg font-medium text-foreground hover:text-accent transition-colors">What we do</a>
           <a href="#contact" className="accent-btn text-lg">
             Get Started
           </a>
