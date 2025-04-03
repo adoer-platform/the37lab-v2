@@ -26,9 +26,6 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <a href="#architectural-components" className="text-lg font-medium text-foreground hover:text-accent transition-colors">AI Building Blocks</a>
-          <a href="#ai-value-gap" className="text-lg font-medium text-foreground hover:text-accent transition-colors">
-            AI Value Gap
-          </a>
           <a href="#promise" className="text-lg font-medium text-foreground hover:text-accent transition-colors">What we do</a>
           <Link to="/contact" className="accent-btn text-lg">
             Get Started
@@ -46,9 +43,6 @@ const Navbar = () => {
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <a href="#architectural-components" className="py-2 text-xl text-foreground hover:text-accent transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Getting started with AI
-            </a>
-            <a href="#ai-value-gap" className="py-2 text-xl text-foreground hover:text-accent transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
-              AI Value Gap
             </a>
             <a href="#promise" className="py-2 text-xl text-foreground hover:text-accent transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Our Promise

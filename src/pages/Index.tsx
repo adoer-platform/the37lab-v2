@@ -4,7 +4,6 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import SoftwareComponents from "../components/SoftwareComponents";
 import RiskSection from "../components/RiskSection";
-import ValueGapSection from "../components/ValueGapSection";
 import PromiseSection from "../components/PromiseSection";
 import ArchitectureSection from "../components/ArchitectureSection";
 import ProcessSection from "../components/ProcessSection";
@@ -47,7 +46,6 @@ const Index = () => {
       <Hero />
       <SoftwareComponents />
       <RiskSection />
-      <ValueGapSection />
       <PromiseSection />
       <ArchitectureSection />
       <ProcessSection />
