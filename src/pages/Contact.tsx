@@ -84,9 +84,8 @@ const Contact = () => {
             </div>
             
             <div className="mt-16 text-center">
-              <h2 className="text-2xl font-semibold mb-4">Need immediate assistance?</h2>
+              <h2 className="text-2xl font-semibold mb-4">Or just send us an email</h2>
               <p className="text-lg text-muted-foreground">
-                Call us at <span className="text-accent">+1 (555) 123-4567</span> or email{" "}
                 <a href="mailto:info@the37lab.com" className="text-accent underline">
                   info@the37lab.com
                 </a>
