@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - web
+  pull_request:
+    branches:
+      - web
+  repository_dispatch:
+    types: [code-updated]
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout test-repo
+      uses: actions/checkout@v3
+
+    - name: Install dependencies
+      uses: npm/install@v3
+
+    - name: Build
+      uses: npm/build@v3
+
