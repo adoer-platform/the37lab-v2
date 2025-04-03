@@ -1,3 +1,4 @@
+
 import { ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 const Hero = () => {
@@ -8,7 +9,7 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, []);
   const scrollToContent = () => {
-    const firstSection = document.getElementById("risks");
+    const firstSection = document.getElementById("architectural-components");
     if (firstSection) {
       firstSection.scrollIntoView({
         behavior: "smooth"
@@ -43,29 +44,29 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10 pt-20 md:pt-0">
         <div className="max-w-4xl mx-auto text-center">
           <div className={`flex justify-center mb-6 transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <h1 className="text-7xl sm:text-8xl md:text-9xl font-bold text-white tracking-tighter animate-float">
+            <h1 className="text-8xl sm:text-9xl md:text-[10rem] font-bold text-white tracking-tighter animate-float">
               <span className="text-accent text-shadow-glow">the37lab</span>
             </h1>
           </div>
           
-          <h2 className={`font-bold mb-8 text-white transition-all duration-700 delay-300 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <span className="block text-accent text-shadow-glow text-4xl">De-risk</span> and fast-track your <span className="relative inline-block">
+          <h2 className={`font-bold mb-10 text-white transition-all duration-700 delay-300 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <span className="block text-accent text-shadow-glow text-5xl">De-risk</span> and fast-track your <span className="relative inline-block">
               AI&nbsp;ambitions
               <span className="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-accent to-purple-500 rounded-full"></span>
             </span>
           </h2>
           
-          <p className={`text-xl md:text-2xl text-muted-foreground mb-12 transition-all duration-700 delay-500 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <p className={`text-2xl md:text-3xl text-muted-foreground mb-14 transition-all duration-700 delay-500 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             From ideation to AI-driven, scalable solutions — <br className="hidden md:block" />
             <span className="text-foreground">built for real users and business cases.</span>
           </p>
           
-          <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 delay-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <a href="#contact" className="accent-btn group relative overflow-hidden">
+          <div className={`flex flex-col sm:flex-row gap-5 justify-center transition-all duration-700 delay-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <a href="#contact" className="accent-btn group relative overflow-hidden text-xl">
               <span className="relative z-10">Let's Talk</span>
               <span className="absolute inset-0 bg-gradient-to-r from-accent/80 to-accent/60 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
             </a>
-            <a href="#promise" className="secondary-btn group relative overflow-hidden">
+            <a href="#promise" className="secondary-btn group relative overflow-hidden text-xl">
               <span className="relative z-10">Learn More</span>
               <span className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-accent/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
             </a>
@@ -76,7 +77,7 @@ const Hero = () => {
       {/* Enhanced scroll indicator with artistic glow effect */}
       <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer group transition-all duration-1000 delay-1000 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} onClick={scrollToContent}>
         <div className="relative">
-          <ChevronDown className="h-8 w-8 text-accent animate-bounce" />
+          <ChevronDown className="h-10 w-10 text-accent animate-bounce" />
           <div className="absolute inset-0 bg-gradient-to-r from-accent/30 to-purple-500/30 rounded-full blur-md -z-10 group-hover:bg-accent/30 transition-colors duration-300"></div>
         </div>
       </div>

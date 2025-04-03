@@ -32,19 +32,19 @@ const SoftwareComponents = () => {
 
   const components = [
     {
-      icon: <Code className="h-12 w-12 text-accent" />,
+      icon: <Code className="h-16 w-16 text-accent" />,
       name: "ADoer",
       description: "Intelligent automation platform that streamlines workflows and enhances productivity",
       delay: "0ms",
     },
     {
-      icon: <Brain className="h-12 w-12 text-accent" />,
+      icon: <Brain className="h-16 w-16 text-accent" />,
       name: "AMPA",
       description: "Advanced modeling and predictive analytics solution for data-driven decision making",
       delay: "100ms",
     },
     {
-      icon: <GitMerge className="h-12 w-12 text-accent" />,
+      icon: <GitMerge className="h-16 w-16 text-accent" />,
       name: "Citeloop",
       description: "Collaborative research platform that connects insights across disciplines",
       delay: "200ms",
@@ -52,7 +52,7 @@ const SoftwareComponents = () => {
   ];
 
   return (
-    <section className="py-16 bg-background relative overflow-hidden" id="software-components" ref={sectionRef}>
+    <section className="py-20 bg-background relative overflow-hidden" id="software-components" ref={sectionRef}>
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
@@ -60,7 +60,12 @@ const SoftwareComponents = () => {
       </div>
       
       <div className="section-container relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        {/* New Headline */}
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">
+          This is what we are working on right now
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
           {components.map((component, index) => (
             <div
               key={index}
@@ -72,7 +77,7 @@ const SoftwareComponents = () => {
                 transitionDelay: component.delay
               }}
             >
-              <div className="bg-gradient-to-br from-background to-secondary p-6 rounded-xl border border-accent/10 h-full transition-all duration-300 group-hover:border-accent/30 group-hover:shadow-lg relative overflow-hidden">
+              <div className="bg-gradient-to-br from-background to-secondary p-8 rounded-xl border border-accent/10 h-full transition-all duration-300 group-hover:border-accent/30 group-hover:shadow-lg relative overflow-hidden">
                 {/* Glowing accent in corner */}
                 <div className="absolute -top-10 -right-10 w-20 h-20 bg-accent/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
@@ -82,24 +87,24 @@ const SoftwareComponents = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-accent/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 
-                <h3 className="text-2xl font-bold tracking-tight mb-3 group-hover:text-accent transition-colors duration-300">
+                <h3 className="text-3xl font-bold tracking-tight mb-4 group-hover:text-accent transition-colors duration-300">
                   {component.name}
                 </h3>
                 
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-xl text-muted-foreground leading-relaxed">
                   {component.description}
                 </p>
                 
                 {/* Interactive element */}
-                <div className="mt-6 pt-4 border-t border-accent/10">
+                <div className="mt-8 pt-4 border-t border-accent/10">
                   <a 
                     href="#" 
-                    className="text-sm inline-flex items-center text-accent opacity-80 hover:opacity-100 transition-opacity"
+                    className="text-lg inline-flex items-center text-accent opacity-80 hover:opacity-100 transition-opacity"
                   >
                     Learn more
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 
-                      className="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-200" 
+                      className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" 
                       fill="none" 
                       viewBox="0 0 24 24" 
                       stroke="currentColor"
